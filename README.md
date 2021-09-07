@@ -152,6 +152,21 @@ while ( true ) {
 
 <!-- /.references -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/stats/iter/msum`][@stdlib/stats/iter/msum]: create an iterator which iteratively computes a moving sum.
+-   [`@stdlib/stats/iter/prod`][@stdlib/stats/iter/prod]: compute the product of all iterated values.
+
+</section>
+
+<!-- /.related -->
+
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 
@@ -210,6 +225,14 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-iter-mprod/main/LICENSE
 
 [mdn-iterator-protocol]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol
+
+<!-- <related-links> -->
+
+[@stdlib/stats/iter/msum]: https://github.com/stdlib-js/stats-iter-msum
+
+[@stdlib/stats/iter/prod]: https://github.com/stdlib-js/stats-iter-prod
+
+<!-- </related-links> -->
 
 </section>
 
