@@ -196,17 +196,11 @@ jobs:
             echo "::set-output name=remote-exists::false"
           fi
 
-      # If `deno` exists, delete everything in branch and merge `production` into it
-      - name: 'If `deno` exists, delete everything in branch and merge `production` into it'
+      # If `deno` exists, merge `production` into it
+      - name: 'If `deno` exists, merge `production` into it'
         if: steps.deno-branch-exists.outputs.remote-exists
         run: |
           git checkout -b deno origin/deno
-
-          find . -type 'f' | grep -v -e ".git/" -e "package.json" -e "README.md" -e "LICENSE"  -e "CONTRIBUTORS" -e "NOTICE" | xargs rm
-          find . -mindepth 1 -type 'd' | grep -v -e ".git" | xargs rm -rf
-
-          git add -A
-          git commit -m "Remove files"
 
           git merge -s recursive -X theirs origin/production --allow-unrelated-histories
 
@@ -369,17 +363,11 @@ jobs:
             echo "::set-output name=remote-exists::false"
           fi
 
-      # If `umd` exists, delete everything in branch and merge `production` into it
-      - name: 'If `umd` exists, delete everything in branch and merge `production` into it'
+      # If `umd` exists, merge `production` into it
+      - name: 'If `umd` exists, merge `production` into it'
         if: steps.umd-branch-exists.outputs.remote-exists
         run: |
           git checkout -b umd origin/umd
-
-          find . -type 'f' | grep -v -e ".git/" -e "package.json" -e "README.md" -e "LICENSE"  -e "CONTRIBUTORS" -e "NOTICE" | xargs rm
-          find . -mindepth 1 -type 'd' | grep -v -e ".git" | xargs rm -rf
-
-          git add -A
-          git commit -m "Remove files"
 
           git merge -s recursive -X theirs origin/production --allow-unrelated-histories
 
@@ -540,17 +528,11 @@ jobs:
             echo "::set-output name=remote-exists::false"
           fi
 
-      # If `esm` exists, delete everything in branch and merge `production` into it
-      - name: 'If `esm` exists, delete everything in branch and merge `production` into it'
+      # If `esm` exists, merge `production` into it
+      - name: 'If `esm` exists, merge `production` into it'
         if: steps.esm-branch-exists.outputs.remote-exists
         run: |
           git checkout -b esm origin/esm
-
-          find . -type 'f' | grep -v -e ".git/" -e "package.json" -e "README.md" -e "LICENSE"  -e "CONTRIBUTORS" -e "NOTICE" | xargs rm
-          find . -mindepth 1 -type 'd' | grep -v -e ".git" | xargs rm -rf
-
-          git add -A
-          git commit -m "Remove files"
 
           git merge -s recursive -X theirs origin/production --allow-unrelated-histories
 
