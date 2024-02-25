@@ -65,6 +65,11 @@ For a window of size `W`, the moving product is defined as
 ## Usage
 
 ```javascript
+import itermprod from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-iter-mprod@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-iter-mprod/tags). For example,
+
+```javascript
 import itermprod from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-iter-mprod@v0.2.1-deno/mod.js';
 ```
 
@@ -123,7 +128,7 @@ p = it.next().value; // [3.0, -7.0, -5.0]
 
 ```javascript
 import runif from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-uniform@deno/mod.js';
-import itermprod from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-iter-mprod@v0.2.1-deno/mod.js';
+import itermprod from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-iter-mprod@deno/mod.js';
 
 // Create an iterator for generating uniformly distributed pseudorandom numbers:
 var rand = runif( -10.0, 10.0, {
